@@ -1,0 +1,50 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "kora-rent-reclaimer",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-01-18",
+	"d1_databases": [
+		{
+			"binding": "kora_db",
+			"database_name": "kora-db",
+			"database_id": "1f8c2d1a-c1db-48d2-bec6-928ed1cd0f34"
+		}
+	],
+	"compatibility_flags": [
+	  "nodejs_compat"
+	],
+	"triggers": {
+    "crons": [
+      "0 */6 * * *"
+    ]
+  }
+	// "vars": {
+	//   "MY_VAR": "my-variable"
+	// },
+	// "kv_namespaces": [
+	//   {
+	//     "binding": "MY_KV_NAMESPACE",
+	//     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	//   }
+	// ],
+	// "r2_buckets": [
+	//   {
+	//     "binding": "MY_BUCKET",
+	//     "bucket_name": "my-bucket"
+	//   }
+	// ],
+	// "d1_databases": [
+	//   {
+	//     "binding": "MY_DB",
+	//     "database_name": "my-database",
+	//     "database_id": ""
+	//   }
+	// ],
+	// "ai": {
+	//   "binding": "AI"
+	// },
+	// "observability": {
+	//   "enabled": true,
+	//   "head_sampling_rate": 1
+	// }
+}
