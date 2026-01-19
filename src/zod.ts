@@ -6,7 +6,7 @@ export const AccountSchema = z.object({
   balance_lamports: z.number().int().nonnegative(),
   last_active_at: z.number().int(), // Unix Timestamp
   tx_count: z.number().int().nonnegative().default(0),
-  status: z.enum(['MONITORING', 'MARKED_FOR_DEATH', 'RECLAIMED', 'ERROR']).default('MONITORING'),
+  status: z.enum(['MONITORING', 'MARKED_FOR_DEATH', 'RECLAIMED', 'ERROR', 'PROBATION']).default('MONITORING'),
   retry_count: z.number().int().default(0),
 });
 
