@@ -48,7 +48,6 @@ The worker includes a Telegram Webhook for real-time interaction. Use these comm
     
 -   `/sync` – Manually trigger a Helius scan to discover new sponsored accounts.
     
--   `/run` – (Optional) Trigger a full Sync + Reclaim cycle on demand.
     
 
 
