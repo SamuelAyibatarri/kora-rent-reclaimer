@@ -17,7 +17,8 @@
     "crons": [
       "0 */6 * * *"
     ]
-  }
+  },
+  "assets": { "directory": "./public", "binding": "ASSETS" }
 	// "vars": {
 	//   "MY_VAR": "my-variable"
 	// },
