@@ -73,7 +73,7 @@ async function createEmptyTokenAccount() {
     initAccountIx
   );
   
-  console.log(`📤 Sending transaction...`);
+  console.log(`Sending transaction...`);
   const sig = await sendAndConfirmTransaction(
     connection, 
     tx, 
