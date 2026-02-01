@@ -51,7 +51,6 @@ async function createEmptyTokenAccount() {
 
   console.log(`Creating token account: ${tokenAccountKeypair.publicKey.toBase58()}`);
   console.log(`Token account rent: ${(accountRent / 1e9).toFixed(6)} SOL`);
-  console.log(`Owner: ${operator.publicKey.toBase58()} ✅ (Can be closed by operator)\n`);
 
   const createAccountIx = SystemProgram.createAccount({
     fromPubkey: operator.publicKey,
@@ -83,20 +82,14 @@ async function createEmptyTokenAccount() {
   );
 
   console.log(`\n✅ SUCCESS!\n`);
-  console.log(`🎯 Empty Token Account: ${tokenAccountKeypair.publicKey.toBase58()}`);
-  console.log(`🏦 Mint: ${mintKeypair.publicKey.toBase58()}`);
-  console.log(`👤 Owner: ${operator.publicKey.toBase58()}`);
-  console.log(`💰 Rent Locked: ${((mintRent + accountRent) / 1e9).toFixed(6)} SOL`);
-  console.log(`\n🔗 View on Explorer:`);
+  console.log(`Empty Token Account: ${tokenAccountKeypair.publicKey.toBase58()}`);
+  console.log(`Mint: ${mintKeypair.publicKey.toBase58()}`);
+  console.log(`Owner: ${operator.publicKey.toBase58()}`);
+  console.log(`Rent Locked: ${((mintRent + accountRent) / 1e9).toFixed(6)} SOL`);
+  console.log(`\nView on Explorer:`);
   console.log(`https://explorer.solana.com/address/${tokenAccountKeypair.publicKey.toBase58()}?cluster=devnet`);
-  console.log(`\n📋 Transaction:`);
+  console.log(`\nTransaction:`);
   console.log(`https://explorer.solana.com/tx/${sig}?cluster=devnet`);
-  
-  console.log(`\n⏭️  NEXT STEPS:`);
-  console.log(`1. Run: curl http://localhost:8787/run-sync`);
-  console.log(`2. Wait a moment for sync to complete`);
-  console.log(`3. Run: curl http://localhost:8787/run-reclaim`);
-  console.log(`4. Check logs: curl http://localhost:8787/logs`);
 
   return {
     tokenAccount: tokenAccountKeypair.publicKey.toBase58(),
